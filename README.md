@@ -11,7 +11,8 @@ Ths rice is for Hyprland desktops and assumes the machine runs Arch Linux. It us
 
 ## Installation
 
-Given that I haven't had enought time to create a proper installation program yet, users have to use a more manual approach for now:
+There is currently no proper installation script yet, so users have to use a more manual approach for now:
+
 1. Back up pre-existing configurations under `~/.config/matugen`, `~/.config/hypr`, `/.config/rofi`, `~/.config/waybar` and `~/.config/foot`
 2. Install every package listed within `deps.txt` and `aur-packages.txt`. These are basic components required for the rice to work
 3. Copy all subdirectories within this repository to your personal .config directory
