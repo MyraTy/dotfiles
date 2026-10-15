@@ -1,0 +1,2 @@
+waybar-git
+ttf-apple-fonts

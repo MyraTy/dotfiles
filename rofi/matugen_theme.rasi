@@ -1,0 +1,117 @@
+@import "colors"
+
+configuration {
+    show-icons: true;
+    drun-display-format: "{name} \n[<span weight='light' foreground='#888888'>{comment}</span>]";
+    dpi: 0;
+}
+
+window {
+    padding: 5;
+    border: 1px;
+    border-radius: 10px;
+    border-color: var(outline-variant);
+    background-color: var(surface);
+    text-color: var(on-surface);
+}
+mainbox {
+    background-color: inherit;
+    text-color: inherit;
+    padding: 0;
+    border: 0;
+}
+listview {
+    background-color: inherit;
+    text-color: inherit;
+    padding: 2px 0px 0px ;
+    scrollbar:    true;
+    spacing:      2px ;
+    fixed-height: true;
+    lines: 6;
+}
+
+element {
+    padding: 5px;
+    cursor:  pointer;
+    spacing: 5px ;
+    border:  1px;
+    border-radius: 10px;
+    orientation: horizontal;
+}
+element normal.normal {
+    background-color: inherit;
+    text-color: inherit;
+}
+element normal.urgent {
+    background-color: var(error-container);
+    text-color: var(on-error-container);
+}
+element normal.active {
+    background-color: var(secondary);
+    text-color: var(on-secondary);
+}
+element selected.normal {
+    background-color: var(primary-container);
+    text-color: var(on-primary-container);
+}
+element selected.urgent {
+    background-color: var(error);
+    text-color: var(on-error);
+}
+element selected.active {
+    background-color: var(primary);
+    text-color: var(on-primary);
+}
+element alternate.normal {
+    background-color: inherit;
+    text-color: inherit;
+}
+element alternate.urgent {
+    background-color: var(error-container);
+    text-color: var(on-error-container);
+}
+element alternate.active {
+    background-color: var(secondary);
+    text-color: var(on-secondary);
+}
+element-text {
+    background-color: transparent;
+    cursor: inherit;
+    highlight: inherit;
+    text-color: inherit;
+}
+element-icon {
+    background-color: transparent;
+    size: 25px;
+    cursor: inherit;
+    text-color: inherit;
+}
+textbox {
+    text-color: var(on-surface);
+}
+scrollbar {
+    width:        4px ;
+    padding:      0;
+    handle-width: 8px ;
+    border:       0;
+    background-color: inherit;
+    handle-color: var(primary);
+}
+inputbar {
+    padding: 10px;
+    spacing: 0px;
+    border: 1px;
+    border-color: var(outline-variant);
+    border-radius: 10px;
+    background-color: var(surface-container-low);
+    text-color: var(on-surface);
+    children: ["entry"];
+}
+entry {
+    background-color: inherit;
+    text-color: inherit;
+    cursor: text;
+    spacing: 0;
+    placeholder-color: Gray;
+    placeholder: "Type to filter";
+}

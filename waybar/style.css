@@ -1,0 +1,122 @@
+@import "colors.css";
+
+* {
+    font-family: "JetBrains Mono", sans-serif;
+    min-height: 0px;
+}
+
+window#waybar {
+    font-size: 12px;
+    background-color: @surface;
+    color: @on_surface;
+}
+
+tooltip {
+    font-size: 12px;
+    background: alpha(@surface, .75);
+    border: 1px solid @primary;
+    text-shadow: 0px 0px;
+}
+
+tooltip label {
+    color: @on_surface;
+}
+
+button {
+    border: none;
+    border-radius: 15px;
+}
+
+#window,
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#network,
+#wireplumber,
+#tray,
+#privacy,
+#custom-pacman {
+    padding: 0px 10px;
+}
+
+#tray,
+#wireplumber,
+#privacy,
+#custom-tasks {
+    margin: 3px 5px;
+    background-color: @surface_container_high;
+    border-radius: 15px;
+}
+
+#workspaces {
+    margin: 3px;
+    padding: 2px;
+    background-color: @surface_container_high;
+    border-radius: 10px;
+}
+
+#workspaces button {
+    padding: 0px;
+    margin: 0px 2px;
+    color: @on_surface;
+    background: transparent;
+    transition: .1s;
+    transition-timing-function: ease-in-out;
+}
+
+#workspaces button:hover {
+    border: none;
+    background-color: @primary;
+    color: @on_primary;
+}
+
+#workspaces button.focused, #workspaces button.active {
+    border: none;
+    background-color: @primary;
+    color: @on_primary;
+    padding: 0 11px;
+}
+
+#workspaces button.urgent {
+    background-color: @error_container;
+    color: @on_error_container;
+}
+
+#battery.critical:not(.charging) {
+    background-color: @error_container;
+    color: @on_error_container;
+}
+
+#wireplumber.muted {
+    background-color: @primary;
+    color: @on_primary;
+}
+
+#temperature.critical {
+    background-color: @error_container;
+    color: @on_error_container;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    color: @on_primary;
+    background-color: @primary;
+}
+
+#privacy {
+    color: @primary;
+}
+
+#custom-tasks {
+    color: @primary;
+    font-size: 15px;
+    padding: 0px 20px;
+    transition: .2s;
+}
+
+#custom-tasks:hover {
+    padding: 0px 25px;
+}

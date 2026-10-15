@@ -1,0 +1,9 @@
+@theme "matugen_theme"
+
+configuration {
+    modes: "window,drun,run";
+    kb-cancel: "Escape";
+
+    run-command: "uwsm-app -- {cmd}";
+    drun-launch: "uwsm-app -- {cmd}";
+}

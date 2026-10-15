@@ -1,0 +1,20 @@
+[config.wallpaper]
+set=true
+command = "awww img --transition-type wipe --transition-angle 30 {{ image }}"
+
+[templates.hyprland]
+input_path = '~/.config/matugen/templates/hyprland.lua'
+output_path = '~/.config/hypr/hyprland-colors.lua'
+
+[templates.foot]
+input_path  = '~/.config/matugen/templates/foot.ini'
+output_path = '~/.config/foot/foot-colors.ini'
+
+[templates.waybar]
+input_path = '~/.config/matugen/templates/waybar.css'
+output_path = '~/.config/waybar/colors.css'
+post_hook = 'killall -SIGUSR2 waybar'
+
+[templates.rofi]
+input_path = '~/.config/matugen/templates/rofi.rasi'
+output_path = '~/.config/rofi/colors.rasi'
