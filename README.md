@@ -18,3 +18,8 @@ Given that I haven't had enought time to create a proper installation program ye
 4. Put all your Hyprland keybinds in `~/.config/hypr/hyprland-binds.lua` (remember that two scripts, `matugen/change_wallpaper.sh` and `matugen/toggle_mode.sh`, are provided to change the wallapper and appearance)
 5. (optional) Select background and profile images and put them in `~/.config/wallpapers/` and `~/.config/profile-photo.jpg`
 6. (optional) Create a systemd unit to automatically change the wallpaper.
+
+## Credits
+
+General inspiration: https://www.reddit.com/r/unixporn/comments/1w8xso8/hyprland_switched_to_hyprland_a_month_ago_my/
+Hyprlock screen (with some modifications): https://github.com/MrVivekRajan/Hyprlock-Styles

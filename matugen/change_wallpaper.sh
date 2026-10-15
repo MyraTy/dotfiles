@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-WALLPAPERS_DIR=~/pictures/wallpapers/
+WALLPAPERS_DIR=~/.config/wallpapers
 CURRENT_WALLPAPER_FILE=~/.config/matugen/generated/current_wallpaper
 MODE_FILE=~/.config/matugen/generated/current_mode
 
