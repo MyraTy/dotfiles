@@ -1,0 +1,171 @@
+@import "colors"
+
+// ========== TOP-LEVEL CONFIGURATION ==========
+configuration {
+    modi: "window,drun,run,combi";
+    show-icons: true;
+    drun-display-format: "{name} \n[<span weight='light' foreground='#888888'>{comment}</span>]";
+    dpi: 0;
+    font: "JetBrains Mono 12";
+}
+
+window {
+    padding: 5;
+    border: 1px;
+    border-radius: 10px;
+    border-color: @outline-variant;
+    background-color: @surface;
+    text-color: @on-surface;
+}
+
+mainbox {
+    background-color: inherit;
+    text-color: inherit;
+    padding: 0;
+    border: 0;
+    children: [inputbar, listview, mode-switcher];
+}
+
+// ========== ELEMENT LAYOUT CONFIGURATION ==========
+listview {
+    background-color: inherit;
+    text-color: inherit;
+    padding: 2px 0px 0px ;
+    scrollbar: true;
+    spacing: 2px ;
+    fixed-height: true;
+    lines: 6;
+}
+
+// ========== PER-ELEMENT CONFIGURATION ==========
+element {
+    padding: 7px;
+    cursor: pointer;
+    spacing: 5px ;
+    border: 1px;
+    border-radius: 10px;
+    orientation: horizontal;
+    children: [element-icon, element-text, element-index];
+}
+
+element normal.normal {
+    background-color: inherit;
+    text-color: inherit;
+}
+
+element normal.urgent {
+    background-color: @error-container;
+    text-color: @on-error-container;
+}
+
+element normal.active {
+    background-color: @primary;
+    text-color: @on-primary;
+}
+
+element selected.normal {
+    background-color: @primary-container;
+    text-color: @on-primary-container;
+}
+
+element selected.urgent {
+    background-color: @error;
+    text-color: @on-error;
+}
+
+element selected.active {
+    background-color: @secondary;
+    text-color: @on-secondary;
+}
+
+element alternate.normal {
+    background-color: inherit;
+    text-color: inherit;
+}
+
+element alternate.urgent {
+    background-color: @error-container;
+    text-color: @on-error-container;
+}
+
+element alternate.active { 
+    background-color: @secondary;
+    text-color: @on-secondary;
+}
+
+element-text {
+    background-color: transparent;
+    cursor: inherit;
+    highlight: inherit;
+    text-color: inherit;
+}
+
+element-icon {
+    background-color: transparent;
+    size: 35px;
+    cursor: inherit;
+    text-color: inherit;
+}
+
+element-index {
+    padding: 0 7px;
+    vertical-align: 0.5;
+    text-color: @on-surface;
+    highlight: inherit;
+    background-color: @surface-container-low;
+    border: 1px;
+    border-color: @outline-variant;
+    border-radius: 10px;
+}
+
+textbox {
+    text-color: @on-surface;
+    width: 4px ;
+    padding: 0;
+    handle-width: 8px ;
+    border: 0;
+    background-color: inherit;
+    handle-color: @primary;
+}
+
+// ========== SEARCH BAR CONFIGURATION ==========
+inputbar {
+    padding: 10px;
+    spacing: 0px;
+    border: 1px;
+    border-color: @outline-variant;
+    border-radius: 10px;
+    background-color: @surface-container-low;
+    text-color: @on-surface;
+    children: ["entry"];
+}
+
+entry {
+    background-color: inherit;
+    text-color: inherit;
+    cursor: text;
+    spacing: 0;
+    placeholder-color: Gray;
+    placeholder: "Type to filter...";
+}
+
+// ========== MODE SWITCHER CONFIGURATION ==========
+mode-switcher {
+    background-color: inherit;
+    margin: 5px;
+}
+
+button {
+    background-color: @surface-container-low;
+    text-color: @on-surface;
+    padding: 5px;
+    margin: 5px;
+    border: 1px;
+    border-radius: 10px;
+    border-color: @outline-variant;
+}
+
+button active {
+    background-color: @primary-container;
+    text-color: @on-primary-container;
+}

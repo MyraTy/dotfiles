@@ -28,5 +28,4 @@ Hyprlock screen (with some modifications): https://github.com/MrVivekRajan/Hyprl
 ## TODO
 
 - Make an installation script which handles everything
-- Develop a GTK or Qt wallpaper selector for the user to be able to select a wallpaper apart from letting randomness choose one. There are already applications of this kind, but they assume control of everything instead of limiting themselves to printing out to stdout the filename of the walllpaper, the desired behavior
 - Fixing the 'Dissappearing and reappearing' bar problem when changing wallpaper. There are some tools for that, but they must first be implemented in the wallpaper changing workflow.

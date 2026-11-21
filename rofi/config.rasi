@@ -1,7 +1,6 @@
-@theme "matugen_theme"
+@import "colors.rasi"
 
 configuration {
-    modes: "window,drun,run";
     kb-cancel: "Escape";
 
     run-command: "uwsm-app -- {cmd}";

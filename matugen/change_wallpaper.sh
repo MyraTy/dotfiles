@@ -1,17 +1,19 @@
 #!/usr/bin/bash
-WALLPAPERS_DIR=~/.config/wallpapers
+WALLPAPERS_DIR=~/pictures/wallpapers/
 CURRENT_WALLPAPER_FILE=~/.config/matugen/generated/current_wallpaper
 MODE_FILE=~/.config/matugen/generated/current_mode
+ROFI_THEMES_DIR=~/.config/rofi
 
 if [[ ! -f $CURRENT_WALLPAPER_FILE || $(cat $CURRENT_WALLPAPER_FILE) =~ ^[[:space:]]*$ ]]; then
     echo "Dummy" > $CURRENT_WALLPAPER_FILE
 fi
 
-if [ -z $1 ]; then
-    WALLPAPER=$(find $WALLPAPERS_DIR -type f | grep -vFf $CURRENT_WALLPAPER_FILE | shuf -n 1)
-else
-    WALLPAPER=$1
-fi
+case $1 in
+    random) WALLPAPER=$(find $WALLPAPERS_DIR -type f | grep -vFf $CURRENT_WALLPAPER_FILE | shuf -n 1) ;;
+    choose) WALLPAPER=$(for wall in $(find $WALLPAPERS_DIR -type f); do echo -en "$wall\0icon\x1f$wall\n"; done | rofi -dmenu -theme $ROFI_THEMES_DIR/matugen_theme_wallpaper_selector.rasi) ;;
+    *) WALLPAPER=$(find $WALLPAPERS_DIR -type f | grep -vFf $CURRENT_WALLPAPER_FILE | shuf -n 1) ;;
+
+esac
 
 if [ ! -f $MODE_FILE ]; then
     echo "dark" > $MODE_FILE

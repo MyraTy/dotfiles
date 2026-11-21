@@ -1,0 +1,125 @@
+@import "colors"
+
+// ========== TOP-LEVEL CONFIGURATION ==========
+configuration {
+    modi: "dmenu";
+    show-icons: true;
+    dpi: 0;
+    font: "JetBrains Mono 12";
+}
+
+window {
+    width: 70%;
+    padding: 5;
+    border: 1px;
+    border-radius: 10px;
+    border-color: @outline-variant;
+    background-color: @surface;
+    text-color: @on-surface;
+}
+
+mainbox {
+    background-color: inherit;
+    text-color: inherit;
+    padding: 0;
+    border: 0;
+    children: [inputbar, listview];
+}
+
+// ========== ELEMENT LAYOUT CONFIGURATION ==========
+listview {
+    background-color: inherit;
+    text-color: inherit;
+    padding: 2px 0px 0px ;
+    scrollbar: true;
+    spacing: 2px ;
+    columns: 4;
+    lines: 2;
+    fixed-height: true;
+    fixed-columns: true;
+}
+
+// ========== PER-ELEMENT CONFIGURATION ==========
+element {
+    padding: 0px;
+    cursor: pointer;
+    spacing: 5px ;
+    border: 1px;
+    border-radius: 10px;
+    orientation: horizontal;
+    children: [element-icon];
+}
+
+element normal.normal {
+    background-color: inherit;
+    text-color: inherit;
+}
+
+element normal.urgent {
+    background-color: @error-container;
+    text-color: @on-error-container;
+}
+
+element normal.active {
+    background-color: @primary;
+    text-color: @on-primary;
+}
+
+element selected.normal {
+    background-color: @primary-container;
+    text-color: @on-primary-container;
+}
+
+element selected.urgent {
+    background-color: @error;
+    text-color: @on-error;
+}
+
+element selected.active {
+    background-color: @secondary;
+    text-color: @on-secondary;
+}
+
+element alternate.normal {
+    background-color: inherit;
+    text-color: inherit;
+}
+
+element alternate.urgent {
+    background-color: @error-container;
+    text-color: @on-error-container;
+}
+
+element alternate.active { 
+    background-color: @secondary;
+    text-color: @on-secondary;
+}
+
+// ========== HOW ARE THE WALLPAPERS DEPICTED ==========
+element-icon {
+    background-color: transparent;
+    size: 200px;
+    cursor: inherit;
+    text-color: inherit;
+}
+
+// ========== SEARCH BAR CONFIGURATION ==========
+inputbar {
+    padding: 10px;
+    spacing: 0px;
+    border: 1px;
+    border-color: @outline-variant;
+    border-radius: 10px;
+    background-color: @surface-container-low;
+    text-color: @on-surface;
+    children: ["entry"];
+}
+
+entry {
+    background-color: inherit;
+    text-color: inherit;
+    cursor: text;
+    spacing: 0;
+    placeholder-color: Gray;
+    placeholder: "Find wallpapers by file name...";
+}
