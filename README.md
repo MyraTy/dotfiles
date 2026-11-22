@@ -22,7 +22,7 @@ There is currently no proper installation script yet, so users have to use a mor
 
 ## Credits
 
-General inspiration: https://www.reddit.com/r/unixporn/comments/1w8xso8/hyprland_switched_to_hyprland_a_month_ago_my/
+General inspiration: https://www.reddit.com/r/unixporn/comments/1w8xso8/hyprland_switched_to_hyprland_a_month_ago_my/  
 Hyprlock screen (with some modifications): https://github.com/MrVivekRajan/Hyprlock-Styles
 
 ## TODO
